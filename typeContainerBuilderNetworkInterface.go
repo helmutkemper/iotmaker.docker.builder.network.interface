@@ -6,7 +6,7 @@ import (
 
 type ContainerBuilderNetworkInterface interface {
 	Init() (err error)
-	GetConfiguration() (networkConfiguration *network.NetworkingConfig, err error)
+	GetConfiguration() (IP string, networkConfiguration *network.NetworkingConfig, err error)
 	NetworkCreate(name, subnet, gateway string) (err error)
 	GetNetworkName() (name string)
 	Remove() (err error)
